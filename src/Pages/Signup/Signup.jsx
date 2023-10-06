@@ -1,11 +1,37 @@
-import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../provider/AuthProvider';
 
 const Signup = () => {
+    
+    const {signUp, loading} = useContext(AuthContext)
+
+
+
+
+    const handleSignup = e => {
+        e.preventDefault();
+
+        const form = new FormData(e.currentTarget);
+        const email = form.get('email');
+        const password = form.get('password');
+
+        console.log(email,password);
+
+        signUp(email,password)
+        .then(result =>{
+            console.log(result.user);
+        })
+        .catch(error =>{
+            console.log(error.message);
+        })
+
+    }
+
     return (
         <div>
             <h2 className="text-3xl text-center">Please Signup</h2>
-            <form  className="card-body md:w-3/4 lg:w-1/2 mx-auto">
+            <form onSubmit={handleSignup}  className="card-body md:w-3/4 lg:w-1/2 mx-auto">
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text text-xl font-semibold">Your Name</span>

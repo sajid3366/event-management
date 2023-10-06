@@ -6,6 +6,7 @@ import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Signup/Signup";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import Details from "../Pages/Details/Details";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
-                loader:()=>fetch('data.json')
+                loader:()=>fetch('/data.json')
             },
             {
                 path:'/about',
@@ -33,8 +34,8 @@ const router = createBrowserRouter([
             },
             {
                 path:'/news/:id',
-                element:<Details></Details>,
-                loader:()=>fetch('data.json')
+                element:<PrivateRoute><Details></Details></PrivateRoute>,
+                loader:()=>fetch('/data.json')
             }
 
         ]
