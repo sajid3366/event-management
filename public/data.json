@@ -1,0 +1,45 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co/SKkPhcM/pexels-christina-morillo-1181406.jpg",
+      "title": "Conferences and Seminars",
+      "description": "Explore industry trends, gain insights, and network with professionals. Join us for transformative conferences and seminars.",
+      "price": 499.99
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co/xDbzTkm/m-Zz-Oa5-G8h-SPI-unsplash.jpg",
+      "title": "Trade Shows and Expos",
+      "description": "Discover innovations, connect with entrepreneurs, and explore technologies. Engaging trade shows and expos await you.",
+      "price": 599.99
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co/zHHWYL8/austin-distel-w-D1-LRb9-Oe-Eo-unsplash.jpg",
+      "title": "Team Building Workshops",
+      "description": "Enhance teamwork and problem-solving skills in interactive workshops. Strengthen bonds and boost morale. Unlock your team's potential.",
+      "price": 399.99
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co/18QkdXB/tom-crew-NUUj-Vj4-YQLA-unsplash.jpg",
+      "title": "Product Launches",
+      "description": "Elevate your product launch with our expert services. Make lasting impressions and create unforgettable experiences.",
+      "price": 799.99
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co/ZfdB0NM/linkedin-sales-solutions-4rv-Bjo-QWERk-unsplash.jpg",
+      "title": "Corporate Meetings",
+      "description": "Host seamless and productive meetings. Ensure effective communication and decision-making. We provide ideal environments for success.",
+      "price": 299.99
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co/ZWnHJmR/tim-mossholder-up-ET0w5-Mv-M-unsplash.jpg",
+      "title": "Award Ceremonies",
+      "description": "Celebrate achievements with elegant award ceremonies. Honor excellence and inspire others. Memorable events crafted for your honorees.",
+      "price": 899.99
+    }
+  ]
+  
