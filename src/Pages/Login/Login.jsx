@@ -1,10 +1,13 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import swal from 'sweetalert';
+
 
 const Login = () => {
 
     const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
     const location = useLocation();
     const navigate = useNavigate()
     const { logIn } = useContext(AuthContext);
@@ -17,10 +20,12 @@ const Login = () => {
         const password = form.get('password');
 
         console.log(email, password);
+        setError('');
 
         logIn(email, password)
             .then(result => {
                 console.log(result.user);
+                setSuccess('Successfully Loged In');
                 navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
@@ -48,8 +53,13 @@ const Login = () => {
                     <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                     <label className="label">
                         <p className="text-red-600">{
-                            error?error:<span>Login successful</span>
+                            error && error
                         }</p>
+                        <p className="text-green-500">
+                        {
+                            success&& swal("Successfully Loged In", "", "success")
+                        }
+                        </p>
                     </label>
                 </div>
                 <div className="form-control mt-6">

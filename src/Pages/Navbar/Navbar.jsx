@@ -4,9 +4,9 @@ import { AuthContext } from "../../provider/AuthProvider";
 
 const Navbar = () => {
 
-    const {user,logOut} = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
 
-    const handleLogout=()=>{
+    const handleLogout = () => {
         logOut()
     }
 
@@ -45,13 +45,18 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
-            {
-                user?<button onClick={handleLogout} className="bg-slate-300 rounded-lg text-black px-4 py-2">Logout</button>
-                :<div className="w-1/3 flex justify-end items-center">
-                <NavLink to='/login'><button className="bg-slate-300 rounded-lg text-black px-4 py-2">Login</button></NavLink>
+            <div>
+                
+                {
+                    user ? <>
+                        <span>{user.email}</span> <button onClick={handleLogout} className="bg-slate-300 rounded-lg text-black px-4 py-2">Logout</button>
+                    </>
+                        : <div className="w-1/3 flex justify-end items-center">
+                            <NavLink to='/login'><button className="bg-slate-300 rounded-lg text-black px-4 py-2">Login</button></NavLink>
+                        </div>
+                }
             </div>
-            }
-            
+
 
         </nav>
     );

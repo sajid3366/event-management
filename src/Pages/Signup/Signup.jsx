@@ -1,10 +1,14 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import swal from 'sweetalert';
+
 
 const Signup = () => {
-    
-    const {signUp, loading} = useContext(AuthContext)
+
+    const { signUp, loading } = useContext(AuthContext)
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
 
 
 
@@ -15,30 +19,42 @@ const Signup = () => {
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
+        const displayName = form.get('name');
 
-        console.log(email,password);
 
-        signUp(email,password)
-        .then(result =>{
-            console.log(result.user);
-        })
-        .catch(error =>{
-            console.log(error.message);
-        })
+        console.log(email, password, displayName);
+        if (password.length < 6) {
+            return setError('Password should be at least 6 character or logner');
+        }
+
+        setError('');
+        setSuccess('')
+
+        signUp(email, password)
+            .then(result => {
+                console.log(result.user);
+                setSuccess('User created successfully');
+
+            })
+            .catch(error => {
+                console.log(error.message);
+                setError('invalid')
+
+            })
 
     }
 
     return (
         <div>
             <h2 className="text-3xl text-center">Please Signup</h2>
-            <form onSubmit={handleSignup}  className="card-body md:w-3/4 lg:w-1/2 mx-auto">
+            <form onSubmit={handleSignup} className="card-body md:w-3/4 lg:w-1/2 mx-auto">
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text text-xl font-semibold">Your Name</span>
                     </label>
                     <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
                 </div>
-                
+
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text text-xl font-semibold">Email address</span>
@@ -51,7 +67,14 @@ const Signup = () => {
                     </label>
                     <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
                     <label className="label">
-                        <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                        <p>
+                            {
+                                error && error
+                            }
+                            {
+                                success && success
+                            }
+                        </p>
                     </label>
                 </div>
                 <div className="form-control mt-6">
