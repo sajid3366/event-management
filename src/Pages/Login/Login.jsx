@@ -10,7 +10,24 @@ const Login = () => {
     const [success, setSuccess] = useState('');
     const location = useLocation();
     const navigate = useNavigate()
-    const { logIn } = useContext(AuthContext);
+    const { googleSignin, logIn } = useContext(AuthContext);
+
+
+
+    const handleLoginWithGoogle = e => {
+        e.preventDefault();
+
+        googleSignin()
+            .then(resuslt => {
+                console.log(resuslt.user);
+                setSuccess('Successfully Loged In');
+                navigate(location?.state ? location.state : '/')
+            })
+            .catch(error=>{
+                console.error(error);
+            })
+
+    }
 
     const handleLogin = e => {
         e.preventDefault();
@@ -22,9 +39,14 @@ const Login = () => {
         console.log(email, password);
         setError('');
 
+        // if(email != user.email){
+        //     return setError('Invalid email');
+        // }
+
         logIn(email, password)
             .then(result => {
                 console.log(result.user);
+
                 setSuccess('Successfully Loged In');
                 navigate(location?.state ? location.state : '/')
             })
@@ -52,18 +74,25 @@ const Login = () => {
                     </label>
                     <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                     <label className="label">
-                        <p className="text-red-600">{
-                            error && error
-                        }</p>
+
+                        <p>
+                            {
+                                error && <span className="text-red-600">{error}</span>
+                            }
+                        </p>
+
                         <p className="text-green-500">
-                        {
-                            success&& swal("Successfully Loged In", "", "success")
-                        }
+                            {
+                                success && swal("Successfully Loged In", "", "success")
+                            }
                         </p>
                     </label>
                 </div>
                 <div className="form-control mt-6">
                     <button className="btn text-white bg-[#403F3F]">Login</button>
+                </div>
+                <div onClick={handleLoginWithGoogle} className="form-control mt-6">
+                    <button className="btn btn-primary">Login With Google</button>
                 </div>
             </form>
             <p className="text-center mt-4">Don't have an account? <Link className="text-red-500" to="/signup">Sign Up</Link></p>

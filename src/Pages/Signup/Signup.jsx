@@ -1,12 +1,11 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
-import swal from 'sweetalert';
 
 
 const Signup = () => {
 
-    const { signUp, loading } = useContext(AuthContext)
+    const { signUp} = useContext(AuthContext)
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
@@ -23,22 +22,32 @@ const Signup = () => {
 
 
         console.log(email, password, displayName);
+        setError('')
+        setSuccess('')
+
+
+
         if (password.length < 6) {
             return setError('Password should be at least 6 character or logner');
         }
 
-        setError('');
-        setSuccess('')
+        else if (!/[A-Z]/.test(password)) {
+            return setError("Password should be at least one Upper case");
+        }
+        else if(!/[#?!@$%^&*-]/.test(password)){
+            return setError('Password should be at least one special character');
+        }
+
 
         signUp(email, password)
             .then(result => {
                 console.log(result.user);
-                setSuccess('User created successfully');
+                // setSuccess('User created successfully');
 
             })
             .catch(error => {
-                console.log(error.message);
-                setError('invalid')
+                console.error(error);
+                
 
             })
 
@@ -67,12 +76,14 @@ const Signup = () => {
                     </label>
                     <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
                     <label className="label">
+                        
                         <p>
                             {
-                                error && error
+                                error && <span className='text-red-600'>{error}</span>
                             }
+
                             {
-                                success && success
+                                success && <span className='text-green-500'>{success}</span>
                             }
                         </p>
                     </label>

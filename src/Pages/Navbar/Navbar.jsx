@@ -36,11 +36,12 @@ const Navbar = () => {
                         </NavLink>
 
                     </li>
+                    
                     <li>
-                        <NavLink to="/service" className={({ isActive, isPending }) =>
+                        <NavLink to="/blog" className={({ isActive, isPending }) =>
                             isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
                         }>
-                            Service
+                            Blog
                         </NavLink>
                     </li>
                 </ul>

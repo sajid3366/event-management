@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import Service from "./Service";
+import Review from "../Review/Review";
 
 const Home = () => {
 
@@ -18,7 +19,7 @@ const Home = () => {
 
             }} className="h-[80vh] w-[500px] lg:w-full rounded-lg" alt="" />
 
-            <div className="">
+            <div className="mb-8">
             <h2 className="text-4xl font-bold mt-[100px] text-center">Check the Events</h2>
             <p className="text-center max-w-2xl mx-auto mt-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci quisquam cupiditate ducimus? Eius dolorum rem deserunt, aliquid pariatur porro enim!</p>
             <div className="grid grid-cols-3 mt-14 gap-5">
@@ -28,6 +29,7 @@ const Home = () => {
                 }
             </div>
             </div>
+            <Review></Review>
         </div>
     );
 };

@@ -7,6 +7,7 @@ import Signup from "../Pages/Signup/Signup";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import Details from "../Pages/Details/Details";
 import PrivateRoute from "./PrivateRoute";
+import Blog from "../Pages/Blog/Blog";
 
 
 const router = createBrowserRouter([
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
                 path:'/news/:id',
                 element:<PrivateRoute><Details></Details></PrivateRoute>,
                 loader:()=>fetch('/data.json')
+            },
+            {
+                path:'/blog',
+                element:<Blog></Blog>
             }
 
         ]
