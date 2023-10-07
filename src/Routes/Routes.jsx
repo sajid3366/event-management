@@ -7,7 +7,9 @@ import Signup from "../Pages/Signup/Signup";
 import ErrorPage from "../ErrorPage/ErrorPage";
 import Details from "../Pages/Details/Details";
 import PrivateRoute from "./PrivateRoute";
-import Blog from "../Pages/Blog/Blog";
+import Blogs from "../Pages/Blog/Blogs";
+import OurDeals from "../Pages/OurDeals/OurDeals";
+import Contact from "../Pages/Contact/Contact";
 
 
 const router = createBrowserRouter([
@@ -20,10 +22,6 @@ const router = createBrowserRouter([
                 path:'/',
                 element:<Home></Home>,
                 loader:()=>fetch('/data.json')
-            },
-            {
-                path:'/about',
-                element:<About></About>
             },
             {
                 path:'/login',
@@ -40,8 +38,18 @@ const router = createBrowserRouter([
             },
             {
                 path:'/blog',
-                element:<Blog></Blog>
+                element:<PrivateRoute><Blogs></Blogs></PrivateRoute>,
+                loader: ()=>fetch('/blog.json')
+            },
+            {
+                path:'/deals',
+                element: <OurDeals></OurDeals>
+            },
+            {
+                path:'/contact',
+                element:<Contact></Contact>
             }
+
 
         ]
     }

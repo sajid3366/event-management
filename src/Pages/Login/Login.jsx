@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import swal from 'sweetalert';
+import { FaGoogle } from "react-icons/fa";
+
 
 
 const Login = () => {
@@ -92,7 +94,7 @@ const Login = () => {
                     <button className="btn text-white bg-[#403F3F]">Login</button>
                 </div>
                 <div onClick={handleLoginWithGoogle} className="form-control mt-6">
-                    <button className="btn btn-primary">Login With Google</button>
+                    <button className="btn btn-primary"><FaGoogle></FaGoogle>Login With Google</button>
                 </div>
             </form>
             <p className="text-center mt-4">Don't have an account? <Link className="text-red-500" to="/signup">Sign Up</Link></p>

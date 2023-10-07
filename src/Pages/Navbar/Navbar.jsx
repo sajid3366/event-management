@@ -29,14 +29,12 @@ const Navbar = () => {
 
                     </li>
                     <li>
-                        <NavLink to="/about" className={({ isActive, isPending }) =>
+                        <NavLink to="/deals" className={({ isActive, isPending }) =>
                             isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
                         }>
-                            About
+                            Deals
                         </NavLink>
-
                     </li>
-                    
                     <li>
                         <NavLink to="/blog" className={({ isActive, isPending }) =>
                             isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
@@ -44,10 +42,19 @@ const Navbar = () => {
                             Blog
                         </NavLink>
                     </li>
+
+                    <li>
+                        <NavLink to="/contact" className={({ isActive, isPending }) =>
+                            isActive ? "text-[#FF444A] underline font-bold" : isPending ? "pending" : ""
+                        }>
+                            Contact
+                        </NavLink>
+                    </li>
+
                 </ul>
             </div>
             <div>
-                
+
                 {
                     user ? <>
                         <span>{user.email}</span> <button onClick={handleLogout} className="bg-slate-300 rounded-lg text-black px-4 py-2">Logout</button>

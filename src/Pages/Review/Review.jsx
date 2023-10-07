@@ -1,9 +1,9 @@
 
 const Review = () => {
     return (
-        <div>
-            <h2 className="text-4xl text-center">Customer Review</h2>
-            <p className="max-w-2xl mx-auto  mt-4 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, obcaecati. Non incidunt, obcaecati inventore cumque nostrum deleniti numquam, iusto aliquid, nesciunt eum provident! Fuga tenetur cumque ullam, sequi facilis provident!</p>
+        <div className="mt-20">
+            <h2 className="text-4xl font-bold text-center">Customer Review</h2>
+            <p className="max-w-2xl mx-auto  mt-4 text-center">Customer reviews provide valuable insights, reflecting experiences with products or services. Genuine and diverse reviews aid informed decisions, enhancing consumer trust and shaping businesses' reputation.</p>
         </div>
     );
 };
