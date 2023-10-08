@@ -6,6 +6,8 @@ const Home = () => {
 
     const events = useLoaderData();
     console.log(events);
+    
+ 
 
     return (
         <div>
@@ -30,6 +32,7 @@ const Home = () => {
                     }
                 </div>
             </div>
+            
             <Review></Review>
         </div>
     );
