@@ -5,7 +5,7 @@ const About = () => {
             <div className=" mt-24 mb-20">
                 <h2 className="text-3xl font-bold text-center">About NetGo</h2>
                 <p className="text-[#706F6F] max-w-2xl mx-auto  mt-4 text-center mb-12">Celebrate success with seamless events! Our corporate event management ensures unforgettable experiences, tailored to perfection.</p>
-                <div className="grid grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     <div >
                         <h2 className="text-[#c5a47e] text-xl font-semibold">About</h2>
                         <hr />

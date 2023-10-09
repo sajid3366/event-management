@@ -1,6 +1,7 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 
 const Signup = () => {
@@ -18,10 +19,11 @@ const Signup = () => {
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
-        const display = form.get('name');
+        const name = form.get('name');
+        const photo = form.get('photo');
 
 
-        console.log(email, password, display);
+        console.log(email, password, name,photo);
         setError('')
         setSuccess('')
 
@@ -38,7 +40,7 @@ const Signup = () => {
             return setError('Password should be at least one special character');
         }
 
-        profileUpdate(display)
+        // profileUpdate(name)
         
         
 
@@ -47,6 +49,16 @@ const Signup = () => {
             .then(result => {
                 console.log(result.user);
                 // setSuccess('User created successfully');
+
+                updateProfile(result.user,{
+                    displayName : name,
+                    photoURL : photo
+
+                })
+                .then(()=>console.log('hello vai'))
+                .catch(error=>{
+                    console.log(error);
+                })
 
             })
             .catch(error => {
@@ -66,6 +78,12 @@ const Signup = () => {
                         <span className="label-text text-xl font-semibold">Your Name</span>
                     </label>
                     <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
+                </div>
+                <div className="form-control">
+                    <label className="label">
+                        <span className="label-text text-xl font-semibold">Photo URL</span>
+                    </label>
+                    <input type="text" name="photo" placeholder="Photo URL" className="input input-bordered" required />
                 </div>
 
                 <div className="form-control">

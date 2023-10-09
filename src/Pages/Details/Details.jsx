@@ -12,10 +12,9 @@ const Details = () => {
         setCard(findCards)
     },[news,id])
 
-    console.log(card);
 
     return (
-        <div>
+        <div className='px-4'>
             <img className='w-full h-[80vh] rounded-md' src={card.image} alt="" />
             <h2 className="text-3xl font-bold mt-4">{card.title}</h2>
             <p className='mt-3 text-[#706F6F]'>{card.detail_description}</p>
