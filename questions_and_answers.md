@@ -9,7 +9,7 @@ concate
 
 Q-3
 Ans: A
-Explain: 
+Explain: Changing the object property does not affect the original array. So food array did not changed
 
 Q-4
 Ans: B
@@ -17,4 +17,4 @@ Explain: parameter was not defined for name when sayHi() function called
 
 Q-5
 Ans: C
-Explain: 
+Explain: The condition check wheather the value of the array is truthy or false. When it finds a non-zero or truthy value, it update the count vale.

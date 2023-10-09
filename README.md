@@ -1,4 +1,5 @@
 Site name : NetGo
+Type : Crporate event management
 Live link : decisive-month.surge.sh
 
 Feature of this project
