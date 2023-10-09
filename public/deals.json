@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "type": "Conference",
+        "title": "Innovation Summit 2023",
+        "image": "https://i.ibb.co/tXW54Cp/diego-ph-f-Iq0t-ET6llw-unsplash.jpg",
+        "company_name": "Tech Innovators Inc.",
+        "company_logo": "https://example.com/company_logo.png",
+        "description": "Join Tech Innovators Inc. at the Innovation Summit 2023, where industry leaders and innovators gather to explore the latest trends and technologies shaping our future. Engage in insightful sessions, network with experts, and gain exclusive discounts on tech gadgets and software solutions.",
+        "price": 1920.99,
+        "deals": "NetGo Event Management Company Deal: Book your tickets through NetGo and get an additional 10% off!"
+    },
+    {
+        "id": 2,
+        "type": "Trade Show",
+        "title": "Tech Expo 2022",
+        "image": "https://i.ibb.co/2gsBkgg/iot-tech-expo-logos-idz5-Yjhh-Le.png",
+        "company_name": "Global Tech Expo",
+        "company_logo": "https://example.com/company_logo.png",
+        "description": "Global Tech Expo welcomes you to Tech Expo 2023, showcasing cutting-edge technologies and products from around the world. Explore the future of innovation with free consultations for businesses interested in exhibiting their products.",
+        "price": 2000,
+        "deals": "NetGo Event Management Company Deal: Exhibit at Tech Expo 2023 through NetGo and receive a complimentary promotional package worth $500!"
+    },
+    {
+        "id": 3,
+        "type": "Team Building Workshop",
+        "title": "Team Dynamics Workshop",
+        "image": "https://i.ibb.co/Zxcvjyw/jason-goodman-bzq-U01v-G54-unsplash.jpg",
+        "company_name": "Teamwork Solutions Ltd.",
+        "company_logo": "https://example.com/company_logo.png",
+        "description": "Join Teamwork Solutions Ltd. at the Team Dynamics Workshop, designed to enhance your team's collaboration and communication skills. Strengthen teamwork, boost productivity, and enjoy discounted group rates for corporate teams.",
+        "price": 2909.99,
+        "deals": "NetGo Event Management Company Deal: Book a team building workshop with Teamwork Solutions Ltd. through NetGo and get a free team assessment worth $300!"
+    },
+    {
+        "id": 4,
+        "type": "Product Launch",
+        "title": "GadgetX Pro Launch Event",
+        "image": "https://i.ibb.co/82N8nLP/chuttersnap-Q-Kdj-Kxnt-H8-unsplash.jpg",
+        "company_name": "GadgetX Inc.",
+        "company_logo": "https://example.com/company_logo.png",
+        "description": "Be the first to experience GadgetX Inc.'s latest innovation, GadgetX Pro! Join us for an exclusive product launch event filled with demos and giveaways. Special early-bird pricing available for attendees.",
+        "price": 1049.99,
+        "deals": "NetGo Event Management Company Deal: Attend the GadgetX Pro Launch Event through NetGo and receive a complimentary gadget accessory kit!"
+    },
+    {
+        "id": 5,
+        "type": "Corporate Meeting",
+        "title": "Annual Strategy Conference 2023",
+        "image": "https://i.ibb.co/GPXD8hg/campaign-creators-g-Msn-Xq-ILjp4-unsplash.jpg",
+        "company_name": "Strategic Solutions Corp.",
+        "company_logo": "https://example.com/company_logo.png",
+        "description": "Strategic Solutions Corp. invites you to the Annual Strategy Conference 2023, bringing together key stakeholders to discuss company goals, achievements, and plans for the future. Enjoy networking opportunities with industry experts.",
+        "price": 2049.99,
+        "deals": "NetGo Event Management Company Deal: Register for the Annual Strategy Conference 2023 through NetGo and gain access to exclusive industry reports!"
+    },
+    {
+        "id": 6,
+        "type": "Award Ceremony",
+        "title": "Business Excellence Awards 2022",
+        "image": "https://i.ibb.co/5rQqTtx/anton-maksimov-5642-su-jf0-L7-XEq0n-A-unsplash.jpg",
+        "company_name": "Excellence Enterprises Ltd.",
+        "company_logo": "https://example.com/company_logo.png",
+        "description": "Join Excellence Enterprises Ltd. in celebrating outstanding achievements in business at the Business Excellence Awards 2023. The event recognizes leaders and innovators, offering complimentary tickets for nominees and sponsors.",
+        "price": 1500,
+        "deals": "NetGo Event Management Company Deal: Sponsor the Business Excellence Awards 2023 through NetGo and receive prominent logo placement in event promotional materials!"
+    }
+]

@@ -8,6 +8,7 @@ const Home = () => {
     const events = useLoaderData();
     console.log(events);
     
+    console.log("hello vai");
  
 
     return (

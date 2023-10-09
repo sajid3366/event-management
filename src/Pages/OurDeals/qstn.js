@@ -1,6 +1,5 @@
-const food = ["🍕", "🍫", "🥑", "🍔"];
-const info = { favoriteFood: food[0] };
-
-info.favoriteFood = "🍝";
-
-console.log(food);
+function sayHi(name) {
+    return `Hi there, ${name}`;
+  }
+  
+  console.log(sayHi());

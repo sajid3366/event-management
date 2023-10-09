@@ -14,16 +14,16 @@ const Footer = () => {
             </div>
             <nav>
                 <header className="footer-title">Services</header>
-                <a className="link link-hover">Branding</a>
-                <a className="link link-hover">Design</a>
-                <a className="link link-hover">Marketing</a>
-                <a className="link link-hover">Advertisement</a>
+                <a className="link link-hover">Conferences</a>
+                <a className="link link-hover">Expos</a>
+                <a className="link link-hover">Workshops</a>
+                <a className="link link-hover">Product Launches</a>
+                <a className="link link-hover">Corporate Meetings</a>
             </nav>
             <nav>
                 <header className="footer-title">Company</header>
                 <a className="link link-hover">About us</a>
                 <a className="link link-hover">Contact</a>
-                <a className="link link-hover">Jobs</a>
                 <a className="link link-hover">Press kit</a>
             </nav>
             <nav>

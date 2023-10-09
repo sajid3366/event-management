@@ -5,7 +5,7 @@ import { AuthContext } from '../../provider/AuthProvider';
 
 const Signup = () => {
 
-    const { signUp} = useContext(AuthContext)
+    const { signUp, profileUpdate} = useContext(AuthContext)
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
 
@@ -18,10 +18,10 @@ const Signup = () => {
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
-        const displayName = form.get('name');
+        const display = form.get('name');
 
 
-        console.log(email, password, displayName);
+        console.log(email, password, display);
         setError('')
         setSuccess('')
 
@@ -37,6 +37,10 @@ const Signup = () => {
         else if(!/[#?!@$%^&*-]/.test(password)){
             return setError('Password should be at least one special character');
         }
+
+        profileUpdate(display)
+        
+        
 
 
         signUp(email, password)

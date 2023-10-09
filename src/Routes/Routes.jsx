@@ -43,7 +43,8 @@ const router = createBrowserRouter([
             },
             {
                 path:'/deals',
-                element: <OurDeals></OurDeals>
+                element: <PrivateRoute><OurDeals></OurDeals></PrivateRoute>,
+                loader:()=>fetch("/deals.json")
             },
             {
                 path:'/contact',
