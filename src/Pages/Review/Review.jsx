@@ -31,28 +31,28 @@ const Review = ({ review }) => {
     return (
         <div className="mt-20 mb-12">
             <h2 className="text-4xl font-bold text-center">Clients Review</h2>
-            <p className="max-w-2xl mx-auto  mt-4 text-center mb-12">Customer reviews provide valuable insights, reflecting experiences with products or services.</p>
+            <p className="text-[#706F6F] max-w-2xl mx-auto  mt-4 text-center mb-12">Customer reviews provide valuable insights, reflecting experiences with products or services.</p>
 
             <Carousel className='text-center' responsive={responsive}>
                 <div>
-                    <img className='ml-[140px]' src="/public/Asset/member1.png" alt="" />
+                    <img className='ml-[140px]' src="https://i.ibb.co/h8cb3n6/member1.png" alt="" />
                     <h2 className="text-2xl font-semibold">Alice Johnson</h2>
                     <p className='max-w-sm mx-auto'>Innovative strategies, excellent leadership. Transformed our company's efficiency and productivity</p>
                 </div>
                 <div>
-                    <img className='ml-[140px]' src="/public/Asset/member2.png" alt="" />
+                    <img className='ml-[140px]' src="https://i.ibb.co/Nm0gfMd/member2.png" alt="" />
                     <h2 className="text-2xl font-semibold">Eva Davis</h2>
                     <p className='max-w-sm mx-auto'>Exceptional corporate governance. Their expertise elevated our business performance significantly</p>
                 </div>
                 <div>
-                    <img className='ml-[140px]' src="/public/Asset/member3.png" alt="" />
+                    <img className='ml-[140px]' src="https://i.ibb.co/fM6RSYB/member3.png" alt="" />
                     <h2 className="text-2xl font-semibold">David Smith</h2>
                     <p className='max-w-sm mx-auto'>Professional team, strategic vision. Their advice reshaped our management approach</p>
                 </div>
 
                 <div className=''>
-                    <img className='ml-[140px]' src="/public/Asset/member4.png" alt="" />
-                    <h2 className="text-2xl font-semibold">Mark Wilson</h2>
+                    <img className='ml-[140px]' src="https://i.ibb.co/svPy3YY/member4.png" alt="" />
+                    <h2 className="text-2xl font-semibold">Sophia Brown</h2>
                     <p className='max-w-sm mx-auto'>Outstanding executive coaching. Enhanced our leadership skills and team dynamics.</p>
                 </div>
 

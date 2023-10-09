@@ -68,13 +68,13 @@ const Login = () => {
                     <label className="label">
                         <span className="label-text text-xl font-semibold">Email address</span>
                     </label>
-                    <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+                    <input type="email" name="email" placeholder="Email" className="input input-bordered" required />
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text text-xl font-semibold">Password</span>
                     </label>
-                    <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+                    <input type="password" name="password" placeholder="Password" className="input input-bordered" required />
                     <label className="label">
 
                         <p>
@@ -85,7 +85,7 @@ const Login = () => {
 
                         <p className="text-green-500">
                             {
-                                success && swal("Successfully Loged In", "", "success")
+                                success && swal("Successfully Logged In", "", "success")
                             }
                         </p>
                     </label>

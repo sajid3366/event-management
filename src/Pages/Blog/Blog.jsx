@@ -1,7 +1,17 @@
+import { useState } from "react";
+import { useCollapse } from 'react-collapsed'
+
+
+
 
 const Blog = ({ blog }) => {
 
-    const { title, writer_name,description, image,writer_image } = blog;
+    const { title, writer_name, description, image, writer_image } = blog;
+
+    const [isOpen, setIsopen] = useState(false);
+
+    // const [isExpanded, setExpanded] = useState(false)
+    // const { getCollapseProps, getToggleProps } = useCollapse({ isExpanded })
 
     return (
         <div className="card bg-base-100 shadow-xl">
@@ -12,8 +22,19 @@ const Blog = ({ blog }) => {
                     <img src={writer_image} alt="" />
                     <p className="font-semibold">{writer_name}</p>
                 </div>
+                {/* <div>
+                    <button
+                        {...getToggleProps({
+                            onClick: () => setExpanded((prevExpanded) => !prevExpanded),
+                        })}
+                    >
+                        {isExpanded ? 'Collapse' : 'Expand'}
+                    </button>
+                    <section {...getCollapseProps()}>Collapsed content 🙈</section>
+                </div> */}
+
                 {
-                    description.length >50 ? <p>{description.slice(0,50)} <span className="text-red-700 cursor-pointer">Read More...</span></p>:<p>{description}</p>
+                     !isOpen? <p>{description.slice(0, 50)} <span onClick={() => setIsopen(!isOpen)} className="text-red-700 cursor-pointer">{isOpen ? "Read less.." : "Read more.."}</span></p> : <p>{description}</p>
                 }
             </div>
         </div>
