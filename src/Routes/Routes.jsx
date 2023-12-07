@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layout/Root";
 import Home from "../Pages/Home/Home";
-import About from "../Pages/About/About";
 import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Signup/Signup";
 import ErrorPage from "../ErrorPage/ErrorPage";
@@ -39,12 +38,12 @@ const router = createBrowserRouter([
             {
                 path:'/blog',
                 element:<PrivateRoute><Blogs></Blogs></PrivateRoute>,
-                loader: ()=>fetch('/blog.json')
+                loader: ()=>fetch('/blogdata.json')
             },
             {
                 path:'/deals',
                 element: <PrivateRoute><OurDeals></OurDeals></PrivateRoute>,
-                loader:()=>fetch("/deals.json")
+                loader:()=>fetch("/deal.json")
             },
             {
                 path:'/contact',

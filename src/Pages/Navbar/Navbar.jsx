@@ -59,11 +59,11 @@ const Navbar = () => {
                     user ? <>
 
                         <div className="flex gap-2 items-center">
-                        <span className="text-xl font-semibold">{user.displayName}</span>
-                        <img className="w-[20%] h-[20%] rounded-full" src={user.photoURL} alt="" />
-                        <div>
-                        <button onClick={handleLogout} className="ml-2 bg-slate-300 rounded-lg text-black px-4 py-2">Logout</button>
-                        </div>
+                            <span className="text-xl font-semibold">{user.displayName}</span>
+                            <img className="w-[50px] h-[50px] rounded-full" src={user.photoURL} alt="" />
+                            <div>
+                                <button onClick={handleLogout} className="ml-2 bg-slate-300 rounded-lg text-black px-4 py-2">Logout</button>
+                            </div>
                         </div>
                     </>
                         : <div className="w-1/3  items-center">
